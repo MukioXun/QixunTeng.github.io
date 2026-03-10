@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QIX | Speech AI & Paralinguistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="profile-image">
+                <img src="./portrait.jpg" alt="">
+            </div>
+            <h1>Qixun Teng</h1>
+            <p class="subtitle">Ungraduated Student</p>
+            <p class="bio-mini">
+                Focusing on Spoken LLMs and paralinguistic representation. 
+                Experienced in fluorescence microscopy denoising (CV), 
+                Rust-based OS kernel development, and RAG for embodied navigation.
+            </p>
+            <div class="contact-links">
+                <a href="2023112559@stu.hit.edu.cn"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/MukioXun"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-graduation-cap"></i></a>
+                <a href="#" style="font-weight: 900;">[CV]</a>
+            </div>
+
+            <nav class="side-nav">
+                <a href="#about">About</a>
+                <a href="#publications">Publications</a>
+                <a href="#experience">Projects</a>
+                <a href="#education">Education</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section id="about">
+                <h2>About Me(滕奇勋)</h2>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    Hi, I am an undergraduate student at <strong>Harbin Institute of Technology (HIT)</strong>, specializing in <strong>Spoken Large Language Models (Spoken LLMs)</strong> and <strong>Paralinguistics</strong>. My current research focuses on modeling and evaluating nuanced vocal attributes—such as emotion, tone, and pacing—to build more expressive and human-like speech agents.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.6; margin-top: 1rem;">
+                    My technical journey is defined by <strong>cross-stack exploration</strong>. I have led the development of a <strong>monolithic OS kernel</strong> in Rust (National 2nd Prize), published research in <strong>Computer Vision</strong> (JCR Q1), and designed <strong>RAG frameworks</strong> for embodied AI. This unique blend of low-level systems engineering and high-level deep learning allows me to approach AI challenges with both architectural rigor and algorithmic innovation.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.6; margin-top: 1rem;">
+                    Currently, I am working on establishing standardized benchmarks for speech capabilities, aiming to fill the gap in multi-dimensional semantic and paralinguistic understanding within the open-source community.
+                </p>
+            </section>
+
+            <section id="publications">
+                <h2>Publications</h2>
+                <p><small>* Equal contribution, &dagger; Corresponding author</small></p>
+                <div class="pub-item">
+                    <a href="research/fm2s/"><strong>FM2S: Towards Spatially-Correlated Noise Modeling in Zero-Shot Fluorescence Microscopy Image Denoising</strong></a> 
+                    <span class="venue">[MIR, JCR Q1]</span><br>
+                    Jizhihui Liu*, <strong>Qixun Teng*</strong>, Qing Ma, Junhui Hou, Junjun Jiang&dagger;<br>
+                    <em>Keywords: Image Denoising, Low-Level CV, Fluorescence Microscopy Imaging</em> · 
+                    <a href="https://link.springer.com/article/10.1007/s11633-025-1595-8">[Springer Link]</a> · 
+                    <a href="https://arxiv.org/abs/2412.10031">[Arxiv Link]</a>
+                </div>
+                <div class="pub-item">
+                    <a href="research/UniMoE_Audio/"><strong>UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity Mixture-of-Experts</strong></a> 
+                    <span class="venue">(submitted to ACL-26)</span><br>
+                    zhenyu liu, yunxin li, Xuanyu Zhang, <strong>Qixun Teng</strong>, Shenyuan Jiang, Xinyu Chen, Haoyuan Shi, Haolan Chen, Fanbo Meng, Mingjun Zhao, Yu Xu, Yancheng He, Baotian Hu&dagger;, Haizhou Li, Min Zhang<br>
+                    <em>Keywords: Multimodal Large Language Model, Audio Generation, Mix-of-Experts</em> · 
+                    <a href="https://openreview.net/forum?id=Tu3zq3qU7N#discussion">[ACL Link]</a>
+                    <a href="https://mukioxun.github.io/Uni-MoE-site/home.html">[Web Link]</a>
+                </div>
+                <div class="pub-item">
+                    <a href="research/Lychee_FD/"><strong>Lychee-FD: Hierarchical Acoustic-Semantic Modeling for Full-Duplex Spoken Language Models</strong></a> 
+                    <span class="venue">(submitted to ACL-26)</span><br>
+                    zhenyu liu, Xuanyu Zhang, yunxin li, <strong>Qixun Teng</strong>, Shenyuan Jiang, Haolan Chen, Mingjun Zhao, Fanbo Meng, Yu Xu, Yancheng He, Baotian Hu&dagger;, Haizhou Li, Min Zhang<br>
+                    <em>Keywords: Large Language Model, Multimodal Large Language Model, Spoken Language Model</em> · 
+                    <a href="https://openreview.net/forum?id=iZ2y0sqJJD#discussion">[ACL Link]</a>
+                </div>
+            </section>
+
+            <section id="experience">
+            <h2>Projects</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <h3>Spoken LLMs and Full-Duplex Speech Model Research</h3>
+                    <span class="date">Aug. 2025 - Mar. 2026</span>
+                </div>
+                <p><em>Research Intern</em> | Team: Lychee TMG-HITSZ Advisor: Baotian Hu</p>
+                <ul>
+                    <li><strong>UniMoE-Audio:</strong> We propose UniMoE-Audio, a Dynamic-Capacity MoE framework with three-stage training that resolves task conflicts in unified speech and music generation, achieving SOTA performance., submitted to ACL-26.</li>
+                    <li><strong>Lychee-FD:</strong> To resolve modality interference in full-duplex SLMs, we propose Lychee-FD with hierarchical parameter separation and semantic alignment, achieving SOTA performance. submitted to ACL-26.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <h3>AstrancE: Rust-based Monolithic Kernel</h3>
+                    <span class="date">Dec. 2024 - Aug. 2025</span>
+                </div>
+                <h4>Kernel Track-Computer System Development Capacity Competition(<a href="https://os.educg.net/#/">CSCC</a>)</a></h4>
+                <p><em><strong>National Second Prize</strong></em> | Key Developer | Advisors: Jieting Qiu, Wen Xia</p>
+                <a href="https://gitlab.eduxiji.net/T202518123995667/OSKernel2025_AstrancE" target="_blank">[Project Repo]</a>
+                <ul>
+                    <li>Developed 100+ core POSIX system calls in Rust, transforming a minimal framework into a fully functional monolithic kernel for user-space applications.</li>
+                    <li>Architected the Virtual File System (VFS) and procfs, enabling dynamic device mounting and system information access across block devices.</li>
+                    <li>Achieved full hardware abstraction for <strong>RISC-V</strong> and <strong>LoongArch</strong>, supporting both QEMU and physical boards (<strong>VisionFive2, 2K1000</strong>).</li>
+                    <li>Optimized low-level modules including <strong>multi-core bootloaders</strong>, interrupt handling, and Device Tree integration to ensure cross-platform stability.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <h3>Retrieval-Augmented Generation for Embodied Navigation Large Models</h3>
+                    <span class="date">Dec. 2024 - Aug. 2025</span>
+                </div>
+                <p><em>Project Member</em> | Advisors: Weili Guan, Yaowei Wang</p>
+                <ul>
+                    <li>Designed a RAG framework for embodied navigation with a dual knowledge base and retrieval-rewriting-feedback closed loop.</li>
+                    <li>Built RAG-v1/v2/v3 on EMBODIEDBENCH, lifting task completion rate to 0.43 (baseline 0.39) and cutting planner error rate to ≤0.02 with valid ablation experiments.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <h3>Fluorescence Microscopy Image Denoising via Zero-Shot Learning</h3>
+                    <span class="date">Sep. 2023 - Aug. 2024</span>
+                </div>
+                <p><em>Project Member</em> | Advisor: Junjun Jiang</p>
+                <ul>
+                    <li>Proposed an adaptive noise addition module for Poisson-Gaussian noise distribution to achieve high-quality sample expansion.</li>
+                    <li>Utilized a super-lightweight fully convolutional neural network, completing generation, training, and inference within 10 seconds on a single RTX 4070 Super GPU.</li>
+                    <li>Results published in Machine Intelligence Research (JCR Q1).</li>
+                </ul>
+            </div>
+            </section>
+
+            <section id="education">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="entry">
+                    <div class="entry-header">
+                        <h3>Harbin Institute of Technology (HIT)</h3>
+                        <span class="date">Sep. 2023 - Jun. 2027</span>
+                    </div>
+                    <p>B.Eng. in Artificial Intelligence Academician Class, School of Future Technology (<a href="https://mp.weixin.qq.com/s/axaLz7cmGTCDXvAlJHFuMQ" target="_blank">Intro</a>)</p>
+                </div>
+            </section>
+            <footer style="margin-top: 10rem; border-top: 8px solid #000; padding-top: 1rem; font-weight: 900; font-size: 0.8rem;">
+                LAST UPDATED: MARCH 2026
+            </footer>
+        </main>
+    </div>
+
+</body>
+</html>

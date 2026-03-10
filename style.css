@@ -1,0 +1,173 @@
+/* 全局基础：极高对比度 */
+:root {
+    --text-bold: #000000;    /* 纯黑：用于所有标题 */
+    --text-main: #111111;    /* 深黑：主内容 */
+    --text-muted: #4b5563;   /* 深灰：次要信息 */
+    --link-blue: #0033cc;    /* 经典高对比蓝 */
+    --accent-orange: #ea580c; /* 鲜橙：强调年份/会议 */
+    --border-strong: #000000; /* 纯黑分割线 */
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--text-main);
+    background-color: #ffffff;
+    margin: 0;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+.layout-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 70px;
+    padding: 80px 40px;
+}
+
+/* --- 左侧固定栏：极致紧凑 & 粗大名字 --- */
+.sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 60px;
+    height: fit-content;
+}
+
+.profile-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    border: 3px solid var(--text-bold); /* 粗边框增加存在感 */
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar h1 { 
+    font-size: 2.8rem; /* 更大的名字 */
+    line-height: 1;
+    margin: 0; 
+    font-weight: 900; /* 最粗权重 */
+    letter-spacing: -2px; 
+    color: var(--text-bold);
+}
+
+.sidebar .subtitle { 
+    font-size: 1.1rem; 
+    color: var(--link-blue); 
+    font-weight: 800; 
+    margin: 0.5rem 0; 
+}
+
+.sidebar .bio-mini {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-top: 1rem;
+}
+
+.contact-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.contact-links a {
+    color: var(--text-bold);
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.contact-links a:hover { transform: scale(1.2); color: var(--link-blue); }
+
+/* --- 目录：位置上移 & 粗体导航 --- */
+.side-nav {
+    margin-top: 2rem;
+    border-top: 4px solid var(--text-bold); /* 更粗的分割线 */
+    padding-top: 1.5rem;
+}
+
+.side-nav a {
+    display: block;
+    padding: 4px 0;
+    font-size: 0.9rem;
+    font-weight: 900; /* 粗体导航 */
+    color: var(--text-bold);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.side-nav a:hover { color: var(--link-blue); }
+
+/* --- 右侧内容区：大标题 & 扎实条目 --- */
+.main-content { flex-grow: 1; }
+
+section { margin-bottom: 5rem; }
+
+h2 {
+    font-size: 2rem; /* 大标题 */
+    font-weight: 900;
+    color: var(--text-bold);
+    border-bottom: 4px solid var(--text-bold);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.entry { margin-bottom: 2.5rem; }
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.entry-header h3 { 
+    font-size: 1.4rem; 
+    font-weight: 800;
+    color: var(--text-bold); 
+    margin: 0;
+}
+
+.date { 
+    font-weight: 800; 
+    font-size: 1rem; 
+    color: var(--text-bold); 
+}
+
+/* 论文条目：强调标题 */
+.pub-item { margin-bottom: 2rem; }
+.pub-item a { 
+    font-size: 1.3rem; 
+    text-decoration: none; 
+    color: var(--link-blue); 
+    font-weight: 800; 
+    line-height: 1.2;
+}
+
+.pub-item .venue { 
+    color: var(--accent-orange); 
+    font-weight: 900; 
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-left: 8px;
+}
+
+.pub-item .authors { 
+    font-size: 1.1rem; 
+    font-weight: 600;
+    color: var(--text-main); 
+    display: block; 
+    margin-top: 5px; 
+}
+
+/* 适配移动端 */
+@media (max-width: 850px) {
+    .layout-container { flex-direction: column; padding: 40px 20px; }
+    .sidebar { width: 100%; position: static; }
+    .sidebar h1 { font-size: 3.5rem; }
+}
